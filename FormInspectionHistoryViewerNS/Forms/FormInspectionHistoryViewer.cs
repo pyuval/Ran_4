@@ -12,11 +12,92 @@ namespace FormInspectionHistoryViewerNS
 {
     public partial class FormInspectionHistoryViewer : Form
     {
+        private ListBox lstFiles;
+        private TextBox txtSearch;
+        private Label lblSearch;
+        private DataGridView dgvPreview;
+        private Button btnOpen;
+        private Button btnRefresh;
+        private Button btnOpenZipFolder;
+
+
+
         public FormInspectionHistoryViewer()
         {
             InitializeComponent();
             LoadFileList();
         }
+
+ 
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+
+            this.lstFiles = new ListBox();
+            this.txtSearch = new TextBox();
+            this.lblSearch = new Label();
+            this.dgvPreview = new DataGridView();
+            this.btnOpen = new Button();
+            this.btnRefresh = new Button();
+            this.btnOpenZipFolder = new Button();
+
+            this.SuspendLayout();
+
+            // lblSearch
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(20, 20);
+            this.lblSearch.Text = "Search:";
+
+            // txtSearch
+            this.txtSearch.Location = new System.Drawing.Point(80, 18);
+            this.txtSearch.Size = new System.Drawing.Size(200, 22);
+
+            // lstFiles
+            this.lstFiles.Location = new System.Drawing.Point(20, 60);
+            this.lstFiles.Size = new System.Drawing.Size(260, 480);
+
+            // dgvPreview
+            this.dgvPreview.Location = new System.Drawing.Point(300, 60);
+            this.dgvPreview.Size = new System.Drawing.Size(900, 480);
+            this.dgvPreview.ReadOnly = true;
+            this.dgvPreview.AllowUserToAddRows = false;
+            this.dgvPreview.AllowUserToDeleteRows = false;
+
+            // btnOpen
+            this.btnOpen.Location = new System.Drawing.Point(20, 550);
+            this.btnOpen.Size = new System.Drawing.Size(120, 30);
+            this.btnOpen.Text = "Open File";
+
+            // btnRefresh
+            this.btnRefresh.Location = new System.Drawing.Point(160, 550);
+            this.btnRefresh.Size = new System.Drawing.Size(120, 30);
+            this.btnRefresh.Text = "Refresh";
+
+            // btnOpenZipFolder
+            this.btnOpenZipFolder.Location = new System.Drawing.Point(300, 550);
+            this.btnOpenZipFolder.Size = new System.Drawing.Size(120, 30);
+            this.btnOpenZipFolder.Text = "Open Archive";
+
+            // FormInspectionHistoryViewer
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lstFiles);
+            this.Controls.Add(this.dgvPreview);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnOpenZipFolder);
+            this.Name = "FormInspectionHistoryViewer";
+            this.Text = "טבלת הסטוריה של כל הבדיקות";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
 
         private List<string> _allFiles = new List<string>();
 

@@ -8,7 +8,7 @@ namespace MachineInspections.Designer
 {
     public class ModernButton : Button
     {
-        private Color _defaultColor = Color.White;
+       private Color _defaultColor = Color.White;
         private Color _hoverColor = Color.FromArgb(240, 240, 240);
         private Color _borderColor = Color.FromArgb(33, 150, 243); // Material Blue 500
 
