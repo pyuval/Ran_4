@@ -1,0 +1,34 @@
+﻿{
+  "LastInspectionDate": "2026-01-03T00:00:00",
+  "LastInspectionType": "שבועי",
+  "MachineName": "Siemens Bar",
+  "MaintenanceDateToCodeDesc": {
+    "שבועי": [
+      {
+        "Code": "A-A",
+        "Description": "בדוק לחץ מים"
+      },
+      {
+        "Code": "B",
+        "Description": "בדוק חוזק מכסה בסיס"
+      },
+      {
+        "Code": "C",
+        "Description": "בדוק רעשים חריגים"
+      }
+    ],
+    "שנתי": [
+      {
+        "Code": "SIEMENS-ANNUAL-CHECK",
+        "Description": "בדיקה שנתית מלאה"
+      }
+    ]
+  },
+  "MaintenanceSchedule": {
+    "שבועי": 7,
+    "שנתי": 365
+  },
+  "InspectionTimeOverdue": null,
+  "SerialNumber": "C-AB553",
+  "IsOperational": false
+}
